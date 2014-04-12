@@ -7,10 +7,7 @@
     <name>BlankSlate</name>
 
 	<developers>
-		<developer>
-			<name>Dan Talpau</name>
-			<email>dan.talpau@gmail.com</email>
-		</developer>
+		<developer><name>Dan Talpau</name><email>dan.talpau@gmail.com</email></developer>
 	</developers>
 
 	<licenses>
@@ -25,7 +22,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
-
 
 	<scm>
 		<connection>scm:git:git://github.com/dgt79/blank-slate.git</connection>
@@ -60,45 +56,13 @@
     </build>
 
     <dependencies>
-		<dependency>
-			<groupId>com.google.inject</groupId>
-			<artifactId>guice</artifactId>
-			<version>4.0-beta4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.0-rc1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.0-rc1</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>1.9.5</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.eclipse.jetty.aggregate</groupId>
-			<artifactId>jetty-all</artifactId>
-			<version>9.2.0.M0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-		</dependency>
+		<dependency><groupId>com.google.inject</groupId><artifactId>guice</artifactId><version>4.0-beta4</version></dependency>
+		<dependency><groupId>org.apache.logging.log4j</groupId><artifactId>log4j-api</artifactId><version>2.0-rc1</version></dependency>
+		<dependency><groupId>org.apache.logging.log4j</groupId><artifactId>log4j-core</artifactId><version>2.0-rc1</version></dependency>
+		<dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>4.11</version><scope>test</scope></dependency>
+		<dependency><groupId>org.mockito</groupId><artifactId>mockito-core</artifactId><version>1.9.5</version><scope>test</scope></dependency>
+		<dependency><groupId>org.eclipse.jetty.aggregate</groupId><artifactId>jetty-all</artifactId><version>9.2.0.M0</version></dependency>
+		<dependency><groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId><version>3.1.0</version></dependency>
+		<dependency><groupId>org.yaml</groupId><artifactId>snakeyaml</artifactId><version>1.13</version></dependency>
 	</dependencies>
 </project>
