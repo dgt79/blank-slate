@@ -1,0 +1,8 @@
+language: java
+
+install: echo "I trust Maven."
+
+script: mvn test
+
+jdk:
+  - oraclejdk8
