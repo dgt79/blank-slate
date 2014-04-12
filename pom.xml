@@ -26,21 +26,22 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+
 	<scm>
-		<connection>scm:git:git://bitbucket.org:dgt79/blank-slate.git</connection>
-		<developerConnection>scm:git:git@bitbucket.org:dgt79/blank-slate.git</developerConnection>
-		<url>https://bitbucket.org/dgt79/blank-slate</url>
+		<connection>scm:git:git://github.com/dgt79/blank-slate.git</connection>
+		<developerConnection>scm:git:git@github.com:dgt79/blank-slate.git</developerConnection>
+		<url>https://github.com/dgt79/blank-slate</url>
 		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
-		<system>Bitbucket</system>
-		<url>https://bitbucket.org/dgt79/blank-slate/issues</url>
+		<system>GitHub</system>
+		<url>https://github.com/dgt79/blank-slate/issues</url>
 	</issueManagement>
 
 	<ciManagement>
-		<system>drone.io CI</system>
-		<url>https://drone.io/bitbucket.org/dgt79/blank-slate</url>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/dgt79/blank-slate</url>
 	</ciManagement>
 
     <build>
