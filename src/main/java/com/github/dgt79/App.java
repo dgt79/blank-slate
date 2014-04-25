@@ -1,24 +1,27 @@
 package com.github.dgt79;
 
+import com.github.dgt79.config.AppConfig;
+import org.apache.cxf.transport.servlet.CXFServlet;
 import org.eclipse.jetty.server.Server;
-import org.yaml.snakeyaml.Yaml;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Map;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+import org.springframework.web.context.ContextLoaderListener;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 
 public class App {
-	final static String PORT = "port";
+	public static void main(String[] args) throws Exception {
+		final ServletHolder servletHolder = new ServletHolder(new CXFServlet());
 
-	public static void main(String... args) throws Exception {
-		Yaml yamlConfig = new Yaml();
-		final Map config = (Map<String, String>) yamlConfig.load(new FileInputStream(new File(".config.yml")));
+		final ServletContextHandler context = new ServletContextHandler();
+		context.setContextPath("/");
+		context.addServlet(servletHolder, "/rest/*");
+		context.addEventListener(new ContextLoaderListener());
+		context.setInitParameter( "contextClass", AnnotationConfigWebApplicationContext.class.getName() );
+		context.setInitParameter( "contextConfigLocation", AppConfig.class.getName() );
 
-
-		Server server = new Server((Integer) config.get(PORT));
-
-
+		final Server server = new Server(8080);
+		server.setHandler(context);
 		server.start();
-
+		server.join();
 	}
 }
